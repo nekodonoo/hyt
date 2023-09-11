@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>'𝚕𝚘𝚟𝚎</title>
+    <style>
+        #audioPlayer {
+            visibility: hidden;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="limage/favicon_16px.png">
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: '0G2V-ysNVgo', // YouTube video ID here
+                playerVars: {'mute': 0, 'autoplay': 1},
+                events: {}
+            });
+        }
+    </script>
+
+<style>
+* {image-rendering: pixelated !important;}
+
+body {cursor:url("limage/cursor.gif"), auto;}
+
+a {cursor:url("limage/cursor2.gif"), default;}
+
+  img {
+   position: absolute;
+   bottom:20px;
+   left: 50%;
+   width: 292px;
+   height: 600px;
+   margin-left: -146px;
+}
+	
+</style>
+
+</head>
+<body background="limage/LainLove.gif">
+
+<div align="center">
+   
+ 
+ 
+ 
+
+    <img id="playButton" style="cursor: pointer;" border="0" src="limage/LainBehindMove2.gif" alt="LoveLain" width="292" height="600">
+
+    <audio id="audioPlayer" controls>
+        <source src="duvet.mp3" type="audio/mpeg">
+        Tarayıcınız ses öğesini desteklemiyor.
+    </audio>
+    
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+    
+        playButton.addEventListener('click', function() {
+            audioPlayer.play();
+        });
+    </script>
+
+
+</div>
+
+</body></html>
